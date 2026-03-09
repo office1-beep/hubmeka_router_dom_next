@@ -4,11 +4,11 @@
 
 git init
 
-### 2. 기본 브랜치 이름을 main으로 변경
+## 2. 기본 브랜치 이름을 main으로 변경
 
 git branch -M main
  
-### 3. GitHub 원격 저장소 주소 등록
+## 3. GitHub 원격 저장소 주소 등록
 
 git remote add origin https://github.com/office1-beep/hubmeka_router_dom_next.git
 
