@@ -53,7 +53,6 @@ const SalesInquiry: React.FC = () => {
             // Google Test Key (replace with your actual Site Key in production)
             //서버***************************************************************************************************
             sitekey: "6Lfr7l0sAAAAANW3_PKKK6I1i6x1-9-rUi2Zd03j", //new.hubmeka.com
-			//sitekey: "6LcUboQsAAAAACHFd7i5FXNo110OSvoFZGDN9h7v", //new.hubmeka.com
             //로컬***************************************************************************************************
             //sitekey: "6LeA8l0sAAAAAKLlI0_i3IM7l9DiUUZdvmIZ0i0l", //localhost
             callback: (token: string) => setRecaptchaToken(token),
@@ -62,13 +61,13 @@ const SalesInquiry: React.FC = () => {
         } catch (e) {
           console.error("reCAPTCHA render error:", e);
         }
-		console.error("111======================");
+        console.error("111======================");
       }
-	  console.error("222======================");
+      console.error("222======================");
     };
 
-	console.error("333======================");
-	
+    console.error("333======================");
+
     // Check if grecaptcha is ready, if not, wait for it
     const intervalId = setInterval(() => {
       if (window.grecaptcha && window.grecaptcha.render) {
