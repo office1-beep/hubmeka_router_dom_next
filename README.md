@@ -35,3 +35,11 @@ git commit -m "git 가져오기 갱신"
 ## 3. 파일 remote에 올리기
 
 git push -u origin main
+
+## rechapcha
+
+https://www.google.com/u/1/recaptcha/admin/site/746879235/setup
+
+mefour@hubmeka.com
+
+
