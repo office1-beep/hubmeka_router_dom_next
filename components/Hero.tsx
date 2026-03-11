@@ -86,20 +86,6 @@ const Hero: React.FC = () => {
               </h3>
               <div className="space-y-2.5">
                 <a
-                  href="https://food.hubmeka.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between w-full p-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 rounded-xl transition-all group backdrop-blur-sm"
-                >
-                  <span className="text-white font-bold text-sm group-hover:text-primary-300 transition-colors">
-                    단체급식프로그램
-                  </span>
-                  <ExternalLink
-                    size={14}
-                    className="text-slate-300 group-hover:text-white transition-colors"
-                  />
-                </a>
-                <a
                   href="https://www.hubpass.co.kr"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -107,6 +93,20 @@ const Hero: React.FC = () => {
                 >
                   <span className="text-white font-bold text-sm group-hover:text-blue-300 transition-colors">
                     식자재유통프로그램
+                  </span>
+                  <ExternalLink
+                    size={14}
+                    className="text-slate-300 group-hover:text-white transition-colors"
+                  />
+                </a>
+                <a
+                  href="https://food.hubmeka.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between w-full p-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 rounded-xl transition-all group backdrop-blur-sm"
+                >
+                  <span className="text-white font-bold text-sm group-hover:text-primary-300 transition-colors">
+                    단체급식프로그램
                   </span>
                   <ExternalLink
                     size={14}
@@ -171,11 +171,10 @@ const Hero: React.FC = () => {
                 >
                   {/* Reduced font sizes significantly */}
                   <h1
-                    className={`font-extrabold text-white leading-tight mb-6 drop-shadow-lg ${
-                      slide.id === "distribution"
+                    className={`font-extrabold text-white leading-tight mb-6 drop-shadow-lg ${slide.id === "distribution"
                         ? "text-4xl md:text-5xl lg:text-6xl"
                         : "text-5xl md:text-6xl lg:text-7xl"
-                    }`}
+                      }`}
                   >
                     {renderTitle()}
                   </h1>
@@ -206,11 +205,10 @@ const Hero: React.FC = () => {
                   <button
                     key={idx}
                     onClick={() => setCurrentSlideIndex(idx)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      currentSlideIndex === idx
+                    className={`h-1.5 rounded-full transition-all duration-300 ${currentSlideIndex === idx
                         ? "w-8 bg-white"
                         : "w-2 bg-white/30 hover:bg-white/50"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>

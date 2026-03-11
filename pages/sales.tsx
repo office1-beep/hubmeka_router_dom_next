@@ -53,17 +53,22 @@ const SalesInquiry: React.FC = () => {
             // Google Test Key (replace with your actual Site Key in production)
             //서버***************************************************************************************************
             sitekey: "6Lfr7l0sAAAAANW3_PKKK6I1i6x1-9-rUi2Zd03j", //new.hubmeka.com
+			//sitekey: "6LcUboQsAAAAACHFd7i5FXNo110OSvoFZGDN9h7v", //new.hubmeka.com
             //로컬***************************************************************************************************
-            // sitekey: "6LeA8l0sAAAAAKLlI0_i3IM7l9DiUUZdvmIZ0i0l", //localhost
+            //sitekey: "6LeA8l0sAAAAAKLlI0_i3IM7l9DiUUZdvmIZ0i0l", //localhost
             callback: (token: string) => setRecaptchaToken(token),
             "expired-callback": () => setRecaptchaToken(null),
           });
         } catch (e) {
           console.error("reCAPTCHA render error:", e);
         }
+		console.error("111======================");
       }
+	  console.error("222======================");
     };
 
+	console.error("333======================");
+	
     // Check if grecaptcha is ready, if not, wait for it
     const intervalId = setInterval(() => {
       if (window.grecaptcha && window.grecaptcha.render) {
@@ -171,7 +176,7 @@ const SalesInquiry: React.FC = () => {
       console.error("Network error:", error);
       alert(
         "서버와 통신 중 오류가 발생했습니다. 네트워크 상태를 확인해 주세요.: " +
-          error,
+        error,
       );
     } finally {
       setIsSubmitting(false);
@@ -408,11 +413,10 @@ const SalesInquiry: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full text-slate-900 font-bold text-xl py-4 rounded mt-4 transition-colors shadow-lg flex items-center justify-center gap-2 ${
-                    isSubmitting
-                      ? "bg-slate-300 cursor-not-allowed"
-                      : "bg-[#ffc000] hover:bg-[#ffb000]"
-                  }`}
+                  className={`w-full text-slate-900 font-bold text-xl py-4 rounded mt-4 transition-colors shadow-lg flex items-center justify-center gap-2 ${isSubmitting
+                    ? "bg-slate-300 cursor-not-allowed"
+                    : "bg-[#ffc000] hover:bg-[#ffb000]"
+                    }`}
                 >
                   {isSubmitting ? (
                     <>
