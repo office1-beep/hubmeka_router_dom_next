@@ -27,4 +27,12 @@ https://www.google.com/u/1/recaptcha/admin/site/746879235/setup
 
 mefour@hubmeka.com
 
+##
+
+git init
+git remote add origin https://github.com/office1-beep/tanstankTable-react_editable-and-navigation.git
+git add .
+git commit -m "initial commit"
+git branch -M main
+git push -u origin main
 
