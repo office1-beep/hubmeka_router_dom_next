@@ -50,11 +50,8 @@ const SalesInquiry: React.FC = () => {
 
         try {
           widgetIdRef.current = window.grecaptcha.render(recaptchaRef.current, {
-            // Google Test Key (replace with your actual Site Key in production)
-            //서버***************************************************************************************************
-            sitekey: "6Lfr7l0sAAAAANW3_PKKK6I1i6x1-9-rUi2Zd03j", //new.hubmeka.com
-            //로컬***************************************************************************************************
-            //sitekey: "6LeA8l0sAAAAAKLlI0_i3IM7l9DiUUZdvmIZ0i0l", //localhost
+            // sitekey: "6Leuje4sAAAAAI_gXdDLd1WWf6AyQlilGitYpFsf", //서버
+            sitekey: "6Lcri-4sAAAAAP14tZ3tt00R8WS751rluOPKblDl", // localhost
             callback: (token: string) => setRecaptchaToken(token),
             "expired-callback": () => setRecaptchaToken(null),
           });
@@ -141,9 +138,8 @@ const SalesInquiry: React.FC = () => {
 
     try {
       const response = await fetch(
-        //"http://10.10.78.19:8081/api/sales-inquiry/add",
-        //"http://localhost:8081/api/sales-inquiry/add",
-        "https://report.hubmeka.com:442/api/sales-inquiry/add",
+        // "https://report.hubmeka.com:442/api/sales-inquiry/add", //서버
+        "http://localhost:8081/api/sales-inquiry/add", //localhost
         {
           method: "POST",
           headers: {
@@ -175,7 +171,7 @@ const SalesInquiry: React.FC = () => {
       console.error("Network error:", error);
       alert(
         "서버와 통신 중 오류가 발생했습니다. 네트워크 상태를 확인해 주세요.: " +
-        error,
+          error,
       );
     } finally {
       setIsSubmitting(false);
@@ -412,10 +408,11 @@ const SalesInquiry: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full text-slate-900 font-bold text-xl py-4 rounded mt-4 transition-colors shadow-lg flex items-center justify-center gap-2 ${isSubmitting
-                    ? "bg-slate-300 cursor-not-allowed"
-                    : "bg-[#ffc000] hover:bg-[#ffb000]"
-                    }`}
+                  className={`w-full text-slate-900 font-bold text-xl py-4 rounded mt-4 transition-colors shadow-lg flex items-center justify-center gap-2 ${
+                    isSubmitting
+                      ? "bg-slate-300 cursor-not-allowed"
+                      : "bg-[#ffc000] hover:bg-[#ffb000]"
+                  }`}
                 >
                   {isSubmitting ? (
                     <>
